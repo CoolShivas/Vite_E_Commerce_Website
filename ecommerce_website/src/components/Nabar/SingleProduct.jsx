@@ -1,9 +1,7 @@
 
 
 const SingleProduct = () => {
-    return (
-        <div>SingleProduct</div>
-    )
+    return <h2> Unique single products are here. </h2>
 }
 
 export default SingleProduct

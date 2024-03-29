@@ -1,9 +1,7 @@
 
 
 const ErrorPage = () => {
-    return (
-        <div>ErrorPage</div>
-    )
+    return <h2> Something went wrong !</h2>
 }
 
 export default ErrorPage

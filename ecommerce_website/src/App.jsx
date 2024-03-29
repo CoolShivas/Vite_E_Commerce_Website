@@ -1,3 +1,5 @@
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
 import ErrorPage from "./components/Nabar/ErrorPage";
 import SingleProduct from "./components/Nabar/SingleProduct";
 import Cart from "./components/Nabar/Cart";
@@ -6,12 +8,13 @@ import ContactPage from "./components/Nabar/ContactPage";
 import AboutPage from "./components/Nabar/AboutPage";
 import HomePage from "./components/Nabar/HomePage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-
+import "./App.module.css";
 
 
 function App() {
+
   return <Router>
+    <Header></Header>
     <Routes>
       <Route path="/" Component={HomePage}></Route>
       <Route path="/about" Component={AboutPage}></Route>
@@ -21,6 +24,7 @@ function App() {
       <Route path="/singleproducts/:id" Component={SingleProduct}></Route>
       <Route path="*" Component={ErrorPage}></Route>
     </Routes>
+    <Footer></Footer>
   </Router>
 }
 
