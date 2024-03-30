@@ -8,8 +8,7 @@
 }
 
 
-.navbar_link:link,
-.navbar_link:visited {
+.navbar_link:link .navbar_link:visited {
     display: inline-block;
     text-decoration: none;
     font-size: 1.8rem;
@@ -19,15 +18,13 @@
     transition: color 0.3s linear;
 }
 
-.navbar_link:hover,
-.navbar_link:active {
+.navbar_link:hover .navbar_link:active {
     color: blue;
 }
 
 
 
-.navbar_link,
-.cart_trolley__link {
+.navbar_link .cart_trolley__link {
     position: relative;
 }
 
@@ -37,8 +34,7 @@
 }
 
 
-.navbar_link,
-.cart_total__item {
+.navbar_link .cart_total__item {
     /* 
     width: 2.4rem;
     position: absolute;
@@ -55,8 +51,9 @@
     /* background-color: yellow; */
 }
 
+
 .mobile_navbar_btn {
-    display: none;
+    display: inline;
     background-color: transparent;
     cursor: pointer;
     border: none;

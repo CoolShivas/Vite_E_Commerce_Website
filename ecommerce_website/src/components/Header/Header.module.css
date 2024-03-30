@@ -1,10 +1,11 @@
 .main_header {
     background-color: orange;
-    width: 100%;
-    height: 10rem;
+    /* width: 100%; */
     padding: 0 4.8rem;
-    position: relative;
+    height: 10rem;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }

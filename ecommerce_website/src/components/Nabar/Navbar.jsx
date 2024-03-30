@@ -13,15 +13,15 @@ const Navbar = () => {
             </li>
 
             <li>
-                <NavLink to="/about" className={classes.navbar_link}> About Us </NavLink>
+                <NavLink to="/about" className={classes.navbar_link}> About </NavLink>
             </li>
 
             <li>
-                <NavLink to="/contact" className={classes.navbar_link}> Contact Us </NavLink>
+                <NavLink to="/contact" className={classes.navbar_link}> Contact </NavLink>
             </li>
 
             <li>
-                <NavLink to="/singleproducts/:id" className={classes.navbar_link}> Single Product </NavLink>
+                <NavLink to="/products" className={classes.navbar_link}> Products </NavLink>
             </li>
 
             <li>
@@ -32,9 +32,7 @@ const Navbar = () => {
                 </NavLink>
             </li>
 
-            <li>
-                <NavLink to="/products" className={classes.navbar_link}> Products </NavLink>
-            </li>
+
         </ul>
 
         <div className={classes.mobile_navbar_btn}>
