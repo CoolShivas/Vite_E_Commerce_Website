@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import classes from "./HeroSection.module.css";
 
 const HeroSection = () => {
@@ -12,6 +13,9 @@ const HeroSection = () => {
             molestiae voluptatem qui hic enim eum ab, perferendis eos similique
             tempore placeat eaque mollitia quidem alias.
           </p>
+          <NavLink>
+            <button className={classes.btn_shop__now}> Shop Now </button>
+          </NavLink>
         </div>
         <div>
           <figure>

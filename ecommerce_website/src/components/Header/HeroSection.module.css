@@ -19,3 +19,37 @@ img {
   width: 600px;
   height: 500px;
 }
+
+.btn_shop__now {
+  text-decoration: none;
+  max-width: auto;
+  background-color: rgb(98 84 243);
+  color: rgb(255 255 255);
+  padding: 1.4rem 2.4rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+
+  border: none;
+  text-align: center;
+
+  &:hover,
+  &:active {
+    box-shadow: 0 2rem 2rem 0 rgb(132 144 255/30%);
+    transform: scale(0.96);
+    -webkit-transform: scale(0.96);
+    -moz-transform: scale(0.96);
+    -ms-transform: scale(0.96);
+    -o-transform: scale(0.96);
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(255 255 255);
+    font-size: 1.8rem;
+  }
+}
