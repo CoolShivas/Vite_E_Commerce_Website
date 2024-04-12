@@ -1,3 +1,4 @@
+/* Starting of CSS only for navbar links */
 .navbar_lists {
   display: flex;
   justify-content: space-between;
@@ -20,33 +21,37 @@
 .navbar_link:hover .navbar_link:active {
   color: blue;
 }
+/* Ending of CSS only for navbar links */
 
-.navbar_link .cart_trolley__link {
+/* Starting of Cart Trolley */
+/* CSS for the cart trolley badge number */
+
+.navbar_cart_trolley__link {
   position: relative;
-}
 
-.cart_trolley {
-  position: relative;
-  font-size: 3.2rem;
-}
+  & .cart_trolley {
+    position: relative;
+    font-size: 2.5rem;
+  }
 
-.navbar_link .cart_total__item {
-  /* 
-    width: 2.4rem;
+  /* Cart Badge Css */
+  & .navbar_cart_total__item {
+    width: 2rem;
+    height: 2rem;
     position: absolute;
-    top: -20%;
-    left: 70%;
-    */
-
-  display: grid;
-  /* border-radius: 50%; */
-  height: 2.4rem;
-  /* background-color: #000; */
-  color: #000;
-  place-items: center;
-  /* background-color: yellow; */
+    background-color: #000;
+    color: #000;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    top: -250%;
+    left: 90%;
+    background-color: yellow;
+  }
 }
+/* Ending of Cart Trolley */
 
+/* Starting of Responsive Mobile Button for Menu Open and Close */
 .mobile_navbar_btn {
   /* Hiding both buttons for making responsive  */
   display: none;
@@ -64,6 +69,9 @@
   /* Hiding both buttons for making responsive  */
   display: none;
 }
+/* Ending of Responsive Mobile Button for Menu Open and Close */
+
+/* CSS for making responsive acc to mobile i.e, 768px and tablet i.e, 998px */
 
 @media (width <= 768px) {
   .mobile_navbar_btn {
@@ -123,50 +131,6 @@
     }
   }
 }
-
-/* /////////////////////////////////////////////////////////////////////////////////////////////// */
-
-/* .nav {
-    background-color: red;
-}
-
-.navbar_list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1.5rem;
-    min-width: 10rem;
-    list-style: none;
-}
-
-li:hover {
-    background-color: rgb(115, 210, 115);
-}
-
-
-.cart_trolley {
-    position: relative;
-    font-size: 3.2rem;
-} */
-
-/* .cart_trolley__link {
-    position: relative;
-}
-
-.cart_total__item {
-    width: 2.4rem;
-    height: 2.4rem;
-    position: absolute;
-    background-color: #000;
-    color: #000;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    top: -20%;
-    left: 70%;
-    background-color: yellow;
-}
- */
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
 

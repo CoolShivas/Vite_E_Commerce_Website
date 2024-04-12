@@ -36,12 +36,9 @@ const Navbar = () => {
         </li>
 
         <li>
-          <NavLink
-            to="cart/"
-            className={classes.navbar_link["cart_trolley__link"]}
-          >
+          <NavLink to="cart/" className={classes.navbar_cart_trolley__link}>
             <ImCart className={classes.cart_trolley} />
-            <span className={classes.navbar_link["cart_total__item"]}>50</span>
+            <span className={classes.navbar_cart_total__item}>50</span>
           </NavLink>
         </li>
       </ul>
