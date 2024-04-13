@@ -1,0 +1,49 @@
+.common_heading {
+  text-align: center;
+  padding: 1rem;
+}
+
+.container {
+  /*background-color: orange;
+  */
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+
+  &.contact_form {
+    max-width: 50rem;
+    margin: auto;
+  }
+
+  & .contact_inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  input[type="submit"] {
+    cursor: pointer;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+  }
+
+  &:hover {
+    background-color: aqua;
+    border: 1px solid yellowgreen;
+    color: white;
+
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+  }
+}
