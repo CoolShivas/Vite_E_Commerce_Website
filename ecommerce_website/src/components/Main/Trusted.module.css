@@ -1,0 +1,32 @@
+.container {
+  background-color: #ecca9c;
+  margin: 1rem;
+  text-align: center;
+  padding: 15px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+
+  margin-top: 50px;
+
+  & h3 {
+    color: white;
+    font-size: 25px;
+  }
+
+  & img {
+    width: 100px;
+    height: 70px;
+  }
+}
+
+.brand_section_slider {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.slides {
+}

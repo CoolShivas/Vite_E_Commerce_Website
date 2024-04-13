@@ -1,3 +1,4 @@
+import Trusted from "./components/Main/Trusted";
 import Services from "./components/Main/Services";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
@@ -25,6 +26,7 @@ function App() {
         <Route path="*" Component={ErrorPage}></Route>
       </Routes>
       <Services></Services>
+      <Trusted></Trusted>
       <Footer></Footer>
     </Router>
   );

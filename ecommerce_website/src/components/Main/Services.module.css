@@ -16,6 +16,12 @@
     background-color: #eadbc8;
     text-align: center;
     padding: 25px;
+
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
   }
 
   & .services_two,
@@ -25,7 +31,13 @@
     gap: 0.5rem;
     background-color: #eadbc8;
     text-align: center;
-    padding-bottom: 10px;
+    margin-bottom: 15px;
+
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
   }
 
   & .services_four {
@@ -34,6 +46,12 @@
     background-color: #eadbc8;
     text-align: center;
     padding: 25px;
+
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
   }
 }
 
@@ -42,6 +60,9 @@
   grid-template-rows: repeat(2, 1fr);
   place-content: center;
   gap: 1rem;
+  /* display: flex;
+  flex-direction: column;
+  gap: 1rem; */
 }
 
 .icons {
