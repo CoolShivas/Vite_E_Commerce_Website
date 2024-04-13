@@ -1,10 +1,14 @@
 import HeroSection from "../Header/HeroSection";
 
 const HomePage = () => {
+  const data = {
+    name: "Shiva",
+  };
+
   return (
     <>
       <h2> This is a home page. </h2>
-      <HeroSection></HeroSection>
+      <HeroSection myData={data}></HeroSection>
     </>
   );
 };

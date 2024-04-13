@@ -1,13 +1,15 @@
 import { NavLink } from "react-router-dom";
 import classes from "./HeroSection.module.css";
 
-const HeroSection = () => {
+const HeroSection = ({ myData }) => {
+  const { name } = myData;
+
   return (
     <div className={classes.container}>
       <div className={classes.grid_two__columns}>
         <div className={classes.hero_section__data}>
           <p className={classes.intro_data}> Welcome to </p>
-          <h1> Shiva Classes </h1>
+          <h1> {name} </h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
             molestiae voluptatem qui hic enim eum ab, perferendis eos similique
