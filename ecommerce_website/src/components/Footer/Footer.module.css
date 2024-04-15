@@ -54,11 +54,13 @@ a {
   margin: auto;
   padding: 50px 25px;
   /* padding: 5rem 10rem; */
-  background-color: orange;
+  background-color: #a34343;
   border-radius: 1rem;
   box-shadow: 0 2rem 2rem 1 rgb(132 144 255/30%);
 
   transform: translateY(50%);
+  color: white;
+  font-size: 20px;
 
   & .gir_two_column {
     display: flex;
@@ -91,7 +93,7 @@ a {
       -o-transform: scale(0.96);
     }
 
-    & .navlink {
+    & .navlink_link {
       color: white;
       text-decoration: none;
       font-weight: 600;

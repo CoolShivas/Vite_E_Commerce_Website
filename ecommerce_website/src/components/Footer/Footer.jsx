@@ -12,9 +12,8 @@ const Footer = () => {
             <h3> Talk to us today </h3>
           </div>
           <button className={classes.btn_footer}>
-            <NavLink to="/contact" className={classes.navlink}>
-              {" "}
-              Get Started{" "}
+            <NavLink to="/contact" className={classes.navlink_link}>
+              Get Started
             </NavLink>
           </button>
         </div>
