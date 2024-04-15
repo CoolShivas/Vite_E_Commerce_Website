@@ -7,10 +7,14 @@ const API = "https://api.pujakaitem.com/api/products";
 
 const ContextProvider = (props) => {
   const getProducts = async (url) => {
-    const response = await axios.get(url);
-    // console.log(response);
-    const production = await response.data;
-    console.log(production);
+    try {
+      const response = await axios.get(url);
+      // console.log(response);
+      const production = await response.data;
+      console.log(production);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
