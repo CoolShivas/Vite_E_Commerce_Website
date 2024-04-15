@@ -28,43 +28,54 @@ const Footer = () => {
               blanditiis?
             </p>
           </div>
-        </div>
-        <div className={classes.footer_subscribe}>
-          <h3> Subscibe to get important update</h3>
-          <form action="#">
-            <input type="email" placeholder="your e-mail" />
-            <input type="text" />
-          </form>
+
+          <div className={classes.footer_subscribe}>
+            <h3> Subscibe to get important update</h3>
+            <form action="#">
+              <input type="email" placeholder="your e-mail" />
+              <button> Subscribe </button>
+            </form>
+          </div>
+
+          <div className={classes.footer_social}>
+            <h3> follow us</h3>
+            <div className={classes.footer_social__icons}>
+              <div>
+                <a
+                  href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
+                  target="_blank"
+                >
+                  <FaDiscord className={classes.icons} />
+                </a>
+              </div>
+
+              <div>
+                <a
+                  href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
+                  target="_blank"
+                >
+                  <FaInstagram className={classes.icons} />
+                </a>
+              </div>
+
+              <div>
+                <a
+                  href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
+                  target="_blank"
+                >
+                  <FaYoutube className={classes.icons} />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className={classes.footer_contact}>
+            <h3> Call Us </h3>
+            <a href="tel:5551324568"> +91 123456789787 </a>
+          </div>
         </div>
       </footer>
       {/* Ending Main Footer */}
-
-      <div className={classes.footer_social}>
-        <h3> follow us</h3>
-        <div className={classes.footer_social__icons}>
-          <div>
-            <FaDiscord className={classes.icons} />
-          </div>
-
-          <div>
-            <FaInstagram className={classes.icons} />
-          </div>
-
-          <div>
-            <a
-              href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
-              target="_blank"
-            >
-              <FaYoutube className={classes.icons} />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className={classes.footer_contact}>
-        <h3> Call Us </h3>
-        <a href="tel:5551324568"> +91 123456789787 </a>
-      </div>
 
       {/* Starting of Bottom Footer */}
       <div className={classes.footer_bottom__section}>
