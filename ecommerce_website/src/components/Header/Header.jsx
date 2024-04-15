@@ -1,11 +1,18 @@
 import classes from "./Header.module.css";
-import Navbar from "../Nabar/Navbar"
+import Navbar from "../Nabar/Navbar";
+import { useContext } from "react";
+import AppContext from "../../store/AppContext";
 
 const Header = () => {
-    return <div className={classes.main_header}>
-        <h1> Main Header </h1>
-        <Navbar></Navbar>
-    </div>
-}
+  const { myName } = useContext(AppContext);
 
-export default Header
+  return (
+    <div className={classes.main_header}>
+      <h1> {myName} </h1>
+      <h1> Main Header </h1>
+      <Navbar></Navbar>
+    </div>
+  );
+};
+
+export default Header;
