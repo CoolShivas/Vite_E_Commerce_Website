@@ -1,10 +1,9 @@
 import classes from "./Header.module.css";
 import Navbar from "../Nabar/Navbar";
-import { useContext } from "react";
-import AppContext from "../../store/AppContext";
+import { formationOfCustomHook } from "../../store/AppContext";
 
 const Header = () => {
-  const { myName } = useContext(AppContext);
+  const { myName } = formationOfCustomHook();
 
   return (
     <div className={classes.main_header}>
