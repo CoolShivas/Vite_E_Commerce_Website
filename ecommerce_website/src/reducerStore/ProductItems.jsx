@@ -16,7 +16,7 @@ const ProductItems = (currValue) => {
         </figure>
 
         <div className={classes.card_data}>
-          <div className={classes.card_data_flex}>
+          <div className={classes.card_data__flex}>
             <h3> {name} </h3>
             <p className={classes.card_data__price}> {price} </p>
           </div>

@@ -1,25 +1,15 @@
-.navlink_productItems {
-  & .card {
-    background-color: #fff;
-    width: 100%;
+.card {
+  /* background-color: orange; */
+  background-color: #f0ebe3;
+  width: 100%;
+  height: 50vh;
+  margin-bottom: 10px;
 
-    border-radius: 1rem;
-    position: relative;
-
-    & .card-data {
-      padding: 0 2rem;
-      display: flex;
-
-      & h3 {
-        background-color: red;
-        text-transform: capitalize;
-      }
-
-      & .card-data--price {
-        background-color: yellow;
-      }
-    }
-  }
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
 }
 
 figure {
@@ -75,11 +65,22 @@ figure {
   }
 }
 
-.card-data-flex {
-  margin: 2rem 0;
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
+.card_data {
+  /* background-color: red; */
+  & .card_data__flex {
+    /* display: flex;
+    flex-direction: column; */
+    padding: 1rem 2rem;
+    /* margin-bottom: 10px; */
+    text-transform: capitalize;
+
+    & h3 {
+      float: left;
+    }
+
+    & p {
+      float: right;
+      font-weight: 600;
+    }
+  }
 }
