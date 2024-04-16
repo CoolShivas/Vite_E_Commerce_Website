@@ -1,3 +1,4 @@
+import PureFuncForReducer from "../reducerStore/PureFuncForReducer";
 import axios from "axios";
 import { useEffect, useReducer } from "react";
 import AppContext from "./AppContext";
@@ -12,33 +13,8 @@ const initialState = {
   featureProducts: [],
 };
 
-const pureFuncForReducer = (currState, action) => {
-  if (action.type === "SET_LOADING") {
-    return {
-      ...currState,
-      isLoading: true,
-    };
-  } else if (action.type === "SET_API_DATA") {
-    const featureData = action.payload.filter((currElem) => {
-      return currElem.featured === true;
-    });
-    return {
-      ...currState,
-      isLoading: false,
-      products: action.payload,
-      featureProducts: featureData,
-    };
-  } else {
-    return {
-      ...currState,
-      isLoading: false,
-      isError: true,
-    };
-  }
-};
-
 const ContextProvider = (props) => {
-  const [newData, dispatchData] = useReducer(pureFuncForReducer, initialState);
+  const [newData, dispatchData] = useReducer(PureFuncForReducer, initialState);
 
   const getProducts = async (url) => {
     dispatchData({

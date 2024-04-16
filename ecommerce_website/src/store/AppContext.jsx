@@ -1,6 +1,11 @@
 import { createContext, useContext, useEffect } from "react";
 // Starting or creation of CreateContext
-const AppContext = createContext({});
+const AppContext = createContext({
+  isLoading: false,
+  isError: false,
+  products: [],
+  featureProducts: [],
+});
 
 export default AppContext;
 // Ending or creation of CreateContext
