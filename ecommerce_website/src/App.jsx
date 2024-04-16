@@ -1,5 +1,3 @@
-import Trusted from "./components/Main/Trusted";
-import Services from "./components/Main/Services";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import ErrorPage from "./components/Nabar/ErrorPage";
@@ -25,8 +23,6 @@ function App() {
         <Route path="/singleproducts/:id" Component={SingleProduct}></Route>
         <Route path="*" Component={ErrorPage}></Route>
       </Routes>
-      <Services></Services>
-      <Trusted></Trusted>
       <Footer></Footer>
     </Router>
   );
