@@ -11,8 +11,8 @@ const ProductItems = (currValue) => {
     >
       <div className={classes.card}>
         <figure>
-          <figcaption className={classes.caption}> {category} </figcaption>
           <img src={image} alt={name} />
+          <figcaption className={classes.caption}> {category} </figcaption>
         </figure>
 
         <div className={classes.card_data}>

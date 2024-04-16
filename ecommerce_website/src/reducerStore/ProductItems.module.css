@@ -58,13 +58,13 @@ figure {
   }
 
   & .caption {
-    /*background-color: orange;
-    */
+    background-color: white;
+
     position: absolute;
-    top: 1%;
-    left: 28%;
+    top: 15%;
+    right: 15%;
     text-transform: uppercase;
-    padding: 0.8rem 2rem;
+    padding: 0.1rem 1rem;
     font-size: 1.2rem;
     font-weight: bold;
     border-radius: 2rem;
