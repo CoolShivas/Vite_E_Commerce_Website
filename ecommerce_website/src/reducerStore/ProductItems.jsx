@@ -7,7 +7,7 @@ const ProductItems = (currValue) => {
 
   return (
     <NavLink
-      to={`/singleproduct/${id}`}
+      to={`/singleproducts/${id}`}
       className={classes.navlink_productItems}
     >
       <div className={classes.card}>
