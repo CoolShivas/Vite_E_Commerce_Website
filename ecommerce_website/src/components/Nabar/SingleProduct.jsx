@@ -15,11 +15,23 @@ const SingleProduct = () => {
   console.log(getSingleProduct); // // Here, we are able to access the single product function;
   console.log(singleProduct); // // Here, we are able to access the single product function only but we want the specific product details. For that we have to use the useParam hook for that ;
 
+  const {
+    id: alias,
+    name,
+    company,
+    price,
+    description,
+    category,
+    stock,
+    stars,
+    reviews,
+  } = singleProduct;
+
   useEffect(() => {
     getSingleProduct(`${API2}?id=${id}`);
   }, []);
 
-  return <h2> Unique single products are here. </h2>;
+  return <h2> Unique single products are here. {name} </h2>;
 };
 
 export default SingleProduct;
