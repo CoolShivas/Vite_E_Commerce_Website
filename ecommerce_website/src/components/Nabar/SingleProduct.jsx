@@ -32,6 +32,10 @@ const SingleProduct = () => {
     getSingleProduct(`${API2}?id=${id}`);
   }, []);
 
+  if (isSingleLoading) {
+    return <div> .......Loading </div>;
+  }
+
   return (
     <h2>
       <PageNavigation titleNavigator={name}></PageNavigation>
