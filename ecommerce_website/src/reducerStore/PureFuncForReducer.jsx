@@ -49,6 +49,26 @@ const PureFuncForReducer = (currState, action) => {
         isError: true,
       };
 
+    case "SET_SINGLE_LOADING":
+      return {
+        ...currState,
+        isSingleLoading: true,
+      };
+
+    case "SET_SINGLE_PRODUCT":
+      return {
+        ...currState,
+        isSingleLoading: false,
+        singleProduct: action.payload,
+      };
+
+    case "SET_SINGLE_ERROR":
+      return {
+        ...currState,
+        isSingleLoading: false,
+        isError: true,
+      };
+
     default:
       return currState;
   }
