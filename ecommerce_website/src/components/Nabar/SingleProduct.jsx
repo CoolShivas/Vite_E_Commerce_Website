@@ -1,3 +1,4 @@
+import PageNavigation from "../Navigation/PageNavigation";
 import { useParams } from "react-router-dom";
 import { formationOfCustomHook } from "../../store/AppContext";
 import { useEffect } from "react";
@@ -31,7 +32,11 @@ const SingleProduct = () => {
     getSingleProduct(`${API2}?id=${id}`);
   }, []);
 
-  return <h2> Unique single products are here. {name} </h2>;
+  return (
+    <h2>
+      <PageNavigation titleNavigator={name}></PageNavigation>
+    </h2>
+  );
 };
 
 export default SingleProduct;

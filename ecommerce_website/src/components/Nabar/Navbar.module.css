@@ -1,21 +1,33 @@
 /* Starting of CSS only for navbar links */
 .navbar_lists {
+  /* background-color: red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
   min-width: 10rem;
   list-style: none;
+
+  & .navbar_link {
+    /* background-color: green; */
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
 }
 
 .navbar_link:link .navbar_link:visited {
   display: inline-block;
-  text-decoration: none;
   font-size: 1.8rem;
   font-weight: 500;
   text-transform: uppercase;
-  color: red;
+
   transition: color 0.3s linear;
+  -webkit-transition: color 0.3s linear;
+  -moz-transition: color 0.3s linear;
+  -ms-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
 }
 
 .navbar_link:hover .navbar_link:active {
