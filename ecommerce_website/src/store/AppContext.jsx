@@ -5,6 +5,8 @@ const AppContext = createContext({
   isError: false,
   products: [],
   featureProducts: [],
+  isSingleLoading: false,
+  singleProduct: {},
 });
 
 export default AppContext;
