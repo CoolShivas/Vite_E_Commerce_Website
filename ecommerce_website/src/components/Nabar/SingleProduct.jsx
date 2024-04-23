@@ -15,7 +15,7 @@ const API2 = "https://api.pujakaitem.com/api/products";
 
 const SingleProduct = () => {
   const { id } = useParams();
-  console.log(id);
+  console.log(id);// // Here, useParams give the specific id data that we have selected;
 
   const { getSingleProduct, isSingleLoading, singleProduct } =
     formationOfCustomHook();
@@ -36,7 +36,7 @@ const SingleProduct = () => {
   } = singleProduct;
 
   useEffect(() => {
-    getSingleProduct(`${API2}?id=${id}`);
+    getSingleProduct(`${API2}?id=${id}`);// Here, API2 is the data and id is the specific data that we want;
   }, []);
 
   if (isSingleLoading) {
