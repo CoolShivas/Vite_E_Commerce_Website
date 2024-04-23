@@ -1,3 +1,4 @@
+import SpinnerLoader from "./SpinnerLoader";
 import ProductItems from "./ProductItems";
 import classes from "./FeaturedProducts.module.css";
 import { formationOfCustomHook } from "../store/AppContext";
@@ -8,7 +9,8 @@ const FeaturedProducts = () => {
   // console.log(featureProducts, "featuredProducts checking");
 
   if (isLoading) {
-    return <div> .......Loading </div>;
+    // return <div> .......Loading </div>;
+    return <center> <SpinnerLoader></SpinnerLoader> </center>;
   }
 
   return (

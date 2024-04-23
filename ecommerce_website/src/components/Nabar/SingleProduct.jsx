@@ -1,3 +1,4 @@
+import LoaderSpinner from "./LoaderSpinner";
 import { MdSecurity } from "react-icons/md";
 import { TbTruckDelivery, TbReplace } from "react-icons/tb";
 import FormatPrice from "../../reducerStore/FormatPrice";
@@ -39,7 +40,11 @@ const SingleProduct = () => {
   }, []);
 
   if (isSingleLoading) {
-    return <div> .......Loading </div>;
+    return (
+      <div>
+        <LoaderSpinner></LoaderSpinner>
+      </div>
+    );
   }
 
   return (
@@ -72,7 +77,7 @@ const SingleProduct = () => {
               {/* Products Icons */}
               <div className={classes.product_data__warranty}>
                 <div className={classes.product_warranty__data}>
-                  <TbTruckDelivery className={classes.warranty_icon}/>
+                  <TbTruckDelivery className={classes.warranty_icon} />
                   <p> Free Delivery </p>
                 </div>
 
