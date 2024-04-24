@@ -23,6 +23,7 @@
             background-size: cover;
             object-fit: contain;
             cursor: pointer;
+            margin-bottom: 1rem;
         }
     }
 
@@ -32,9 +33,10 @@
         place-items: center;
         order: 1;
 
-        img{
+        & img{
             max-width: 100%;
             height: auto;
+            cursor: pointer;
         }
     }
 }
