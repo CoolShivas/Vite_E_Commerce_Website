@@ -48,15 +48,15 @@
 
   /* Cart Badge Css */
   & .navbar_cart_total__item {
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     position: absolute;
     background-color: #000;
     color: #000;
     display: grid;
     place-items: center;
-    top: -250%;
-    left: 90%;
+    top: -100%;
+    left: 80%;
     background-color: yellow;
     border-radius: 50%;
     -webkit-border-radius: 50%;

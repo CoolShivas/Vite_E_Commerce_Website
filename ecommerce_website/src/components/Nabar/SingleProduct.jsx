@@ -54,7 +54,7 @@ const SingleProduct = () => {
         <div className={classes.container_single__product}>
           <div className={classes.grid_two__column}>
             {/* Product Images */}
-            <div className="product_images">
+            <div className={classes.product_images}>
               <ImgPicture picture={image}></ImgPicture>
             </div>
 
