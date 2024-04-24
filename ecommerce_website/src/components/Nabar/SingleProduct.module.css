@@ -18,6 +18,13 @@
   align-items: flex-start;
   justify-content: center;
   gap: 2rem;
+
+  & hr{
+    max-width: 100%;
+    width: 90%;
+    border: 0.1rem solid #000;
+    color: red;
+  }
 }
 
 .product_data__warranty {
@@ -52,3 +59,4 @@
   justify-content: center;
   align-items: center;
 }
+

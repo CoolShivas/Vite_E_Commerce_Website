@@ -1,0 +1,46 @@
+.product_colour{
+    /* background-color: orange; */
+    display: flex;
+    align-items: center;
+
+
+    /* & button{
+        border: none;
+        background-color: #fff;
+        cursor: pointer;
+    } */
+
+    .btn_style{
+        width: 2rem;
+        height: 2rem;
+        background-color: #000; 
+        margin-left: 1rem;
+        border: none;
+        outline: none;
+        opacity: 0.5;
+        cursor: pointer;
+    
+    
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        
+        &:hover{
+            opacity: 1;
+        }
+    }
+    &.active{
+        opacity: 1;
+    }
+    
+    
+}
+
+
+
+.check_style{
+    font-size: 1rem;
+    color: #fff;
+}

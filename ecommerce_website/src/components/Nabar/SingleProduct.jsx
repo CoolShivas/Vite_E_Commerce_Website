@@ -1,3 +1,4 @@
+import AddToCart from "../Bucket/AddToCart";
 import ReviewRating from "../Ratings/ReviewRating";
 import LoaderSpinner from "./LoaderSpinner";
 import { MdSecurity } from "react-icons/md";
@@ -9,6 +10,7 @@ import PageNavigation from "../Navigation/PageNavigation";
 import { useParams } from "react-router-dom";
 import { formationOfCustomHook } from "../../store/AppContext";
 import { useEffect } from "react";
+
 
 // const API2 = "https://api.pujakaitem.com/api/products?id=thapaseialnoa";
 
@@ -111,6 +113,10 @@ const SingleProduct = () => {
                   Brand : <span> {company} </span>
                 </p>
               </div>
+              <hr />
+              {/* Starting of Colour Badge for Product of that colour */}
+              {stock > 0 &&  <AddToCart productABC={singleProduct}></AddToCart>}
+              {/* Ending of Colour Badge for Product of that colour */}
             </div>
           </div>
         </div>
