@@ -1,3 +1,4 @@
+import ReviewRating from "../Ratings/ReviewRating";
 import LoaderSpinner from "./LoaderSpinner";
 import { MdSecurity } from "react-icons/md";
 import { TbTruckDelivery, TbReplace } from "react-icons/tb";
@@ -15,12 +16,12 @@ const API2 = "https://api.pujakaitem.com/api/products";
 
 const SingleProduct = () => {
   const { id } = useParams();
-  console.log(id);// // Here, useParams give the specific id data that we have selected;
+  // console.log(id);// // Here, useParams give the specific id data that we have selected;
 
   const { getSingleProduct, isSingleLoading, singleProduct } =
     formationOfCustomHook();
-  console.log(getSingleProduct); // // Here, we are able to access the single product function;
-  console.log(singleProduct); // // Here, we are able to access the single product function only but we want the specific product details. For that we have to use the useParam hook for that ;
+  // console.log(getSingleProduct); // // Here, we are able to access the single product function;
+  // console.log(singleProduct); // // Here, we are able to access the single product function only but we want the specific product details. For that we have to use the useParam hook for that ;
 
   const {
     id: alias,
@@ -61,8 +62,9 @@ const SingleProduct = () => {
             {/* Product data */}
             <div className={classes.product_data}>
               <h2> {name} </h2>
-              <p> {stars} </p>
-              <p> {reviews} reviews </p>
+              {/* <p> {stars} </p>
+              <p> {reviews} reviews </p> */}
+              <p><ReviewRating starsABC={stars} reviewsABC={reviews}></ReviewRating></p>
               {/* Product Price*/}
               <p className="product_data__price">
                 MRP:

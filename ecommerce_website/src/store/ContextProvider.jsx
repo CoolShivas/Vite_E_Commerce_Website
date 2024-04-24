@@ -34,7 +34,7 @@ const ContextProvider = (props) => {
         payload: productResponse,
       });
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       dispatchData({
         type: "API_ERROR",
       });
