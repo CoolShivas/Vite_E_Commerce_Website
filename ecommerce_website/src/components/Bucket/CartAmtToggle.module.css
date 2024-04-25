@@ -1,0 +1,26 @@
+.cart_btn{
+    /* background-color: orange; */
+
+    & .cart_amt_toggle{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        font-size: large;
+        
+        
+
+        & .amt_style{
+            /* background-color: red; */
+            font-size: 25px;
+            font-weight: 400;
+            
+        }
+    }
+    & button{
+        border: none;
+        background-color: #fff;
+        cursor: pointer;
+    }
+}
