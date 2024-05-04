@@ -1,7 +1,7 @@
 import PureFuncForReducer from "../reducerStore/PureFuncForReducer";
 import axios from "axios";
 import { useEffect, useReducer } from "react";
-import AppContext from "./AppContext";
+import ProductContext from "./ProductContext";
 
 // Starting or creation of Context Provider
 const API = "https://api.pujakaitem.com/api/products";
@@ -16,7 +16,8 @@ const initialState = {
   singleProduct: {},
 };
 
-const ContextProvider = (props) => {
+const ProductContextProvider = (props) => {
+  
   const [newData, dispatchData] = useReducer(PureFuncForReducer, initialState);
 
   const getProducts = async (url) => {
@@ -66,11 +67,11 @@ const ContextProvider = (props) => {
   }, []);
 
   return (
-    <AppContext.Provider value={{ ...newData, getSingleProduct }}>
+    <ProductContext.Provider value={{ ...newData, getSingleProduct }}>
       {props.children}
-    </AppContext.Provider>
+    </ProductContext.Provider>
   );
 };
 
-export default ContextProvider;
+export default ProductContextProvider;
 // Ending or creation of Context Provider

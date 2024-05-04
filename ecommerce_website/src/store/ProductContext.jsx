@@ -1,6 +1,6 @@
-import { createContext, useContext, useEffect } from "react";
+import { createContext, useContext } from "react";
 // Starting or creation of CreateContext
-const AppContext = createContext({
+const ProductContext = createContext({
   isLoading: false,
   isError: false,
   products: [],
@@ -9,12 +9,12 @@ const AppContext = createContext({
   singleProduct: {},
 });
 
-export default AppContext;
+export default ProductContext;
 // Ending or creation of CreateContext
 
 // Starting or creation of Custom Hook
 const formationOfCustomHook = () => {
-  return useContext(AppContext);
+  return useContext(ProductContext);
 };
 
 export { formationOfCustomHook };

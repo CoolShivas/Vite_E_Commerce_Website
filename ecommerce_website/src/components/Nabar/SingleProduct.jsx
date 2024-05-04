@@ -8,7 +8,7 @@ import classes from "./SingleProduct.module.css";
 import ImgPicture from "../Ui/ImgPicture";
 import PageNavigation from "../Navigation/PageNavigation";
 import { useParams } from "react-router-dom";
-import { formationOfCustomHook } from "../../store/AppContext";
+import { formationOfCustomHook } from "../../store/ProductContext";
 import { useEffect } from "react";
 
 

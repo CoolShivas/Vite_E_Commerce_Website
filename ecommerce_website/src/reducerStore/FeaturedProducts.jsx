@@ -1,7 +1,7 @@
 import SpinnerLoader from "./SpinnerLoader";
 import ProductItems from "./ProductItems";
 import classes from "./FeaturedProducts.module.css";
-import { formationOfCustomHook } from "../store/AppContext";
+import { formationOfCustomHook } from "../store/ProductContext";
 
 const FeaturedProducts = () => {
   const { isLoading, featureProducts } = formationOfCustomHook();
