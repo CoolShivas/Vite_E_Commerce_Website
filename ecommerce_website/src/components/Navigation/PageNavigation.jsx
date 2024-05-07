@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const PageNavigation = ({ titleNavigator }) => {
   return (
     <div className={classes.section_page__navigator}>
-      <NavLink to="/"> Home </NavLink> / {titleNavigator}
+      <NavLink to="/" className={classes.page_navigator__home}> Home </NavLink> / {titleNavigator}
     </div>
   );
 };
