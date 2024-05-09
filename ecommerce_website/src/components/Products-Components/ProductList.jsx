@@ -1,18 +1,19 @@
+import ListView from "./ListView";
 import GridView from "./GridView";
 import { useFilterCustomHook } from "../../store/FilterContext";
 
 const ProductList = () => {
 
-  const {filter_products, gridViewFunc} = useFilterCustomHook();
+  const {filter_products, grid_view} = useFilterCustomHook();
   
-  if(gridViewFunc)
+  if(grid_view === true)
     {
-      return <GridView productsGrids={filter_products} />
+      return <GridView filter_productsABC={filter_products} />
     }
-    // else if( gridViewFunc === false)
-    //   {
-    //     return <ListView productsGrids={filter_products} />
-    //   }
+    else if( grid_view === false)
+      {
+        return <ListView filter_productsABC={filter_products} />
+      }
 }
 
 export default ProductList;
