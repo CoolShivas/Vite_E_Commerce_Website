@@ -1,0 +1,14 @@
+.section_grid__view{
+    /* background-color: orange; */
+    
+    /* max-width: 25%; */
+    
+
+    & .grid_three__column{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        place-content: center;
+        
+    }
+}
+
