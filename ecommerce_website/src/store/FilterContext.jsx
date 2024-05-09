@@ -7,7 +7,7 @@ const FilterContext = createContext();
 const FilterInitialState = {
     filter_products : [],
     all_products : [],
-    grid_view : true,// It will display the Grid View of products or List View of products depends of true or false;
+    grid_view : false,// It will display the Grid View of products or List View of products depends of true or false;
 };
 
 

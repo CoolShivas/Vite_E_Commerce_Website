@@ -1,0 +1,46 @@
+.section_listView{
+    background-color: #f1f1f1;
+
+    && .grid_two__col___listview{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 3rem;
+    }
+
+    && .listview_details{
+        text-align: left;
+        margin-top: 20px;
+        padding: 1rem;
+    }
+
+    && .name_listView{
+        text-transform: capitalize;
+        
+
+        && h3{
+            font-size: 40px;
+        }
+    }
+
+    && .btn_listView{
+        background-color: #7469B6;
+        padding: 1rem;
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+        border: none;
+
+    }
+
+    && .btn_listView:hover{
+        background-color: #6DC5D1;
+    }
+
+    && .desript_listView{
+        font-size: 25px;
+    }
+
+    && .price_listView{
+        font-size: 20px;
+    }
+}
