@@ -36,7 +36,7 @@ figure {
   & img {
     max-width: 90%;
     margin-top: 1.5rem;
-    height: 10rem;
+    height: 20rem;
     transition: all 0.2s linear;
   }
 
@@ -80,7 +80,8 @@ figure {
 
     & p {
       float: right;
-      font-weight: 600;
+      font-weight: 700;
+      font-size: 20px;
     }
   }
 }
