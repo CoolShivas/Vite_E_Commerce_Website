@@ -4,7 +4,7 @@ import { BsFillGridFill, BsList } from "react-icons/bs";
 
 const Sort = () => {
 
-  const { gridViewFunc, listViewFunc } = useFilterCustomHook();
+  const { gridViewFunc, listViewFunc, filter_products } = useFilterCustomHook();
   return (
     <div className={styles.sort_section}>
 
@@ -25,7 +25,7 @@ const Sort = () => {
       </div>
 
       <div className={styles.product_data}>
-        <h2> Product Available </h2>
+        <h2> {`${filter_products.length} Product Available`} </h2>
       </div>
 
       <div className={styles.sort_selection}>
