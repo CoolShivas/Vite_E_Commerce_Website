@@ -24,6 +24,15 @@ export const FilterContextProvider = (props) => {
         })
     };
 
+
+    const listViewFunc = () => {
+        return dispatchFilterData({
+            type: "SET_LIST_VIEW",
+        })
+    };
+
+
+
     useEffect(() => {
         dispatchFilterData({
             type: "LOAD_FILTER_PRODUCTS",
@@ -33,7 +42,8 @@ export const FilterContextProvider = (props) => {
 
     return <FilterContext.Provider value={{
         ...newFilterData,
-        gridViewFunc
+        gridViewFunc,
+        listViewFunc,
     }}>
         {props.children}
     </FilterContext.Provider>

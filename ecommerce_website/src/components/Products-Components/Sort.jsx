@@ -4,7 +4,7 @@ import { BsFillGridFill, BsList } from "react-icons/bs";
 
 const Sort = () => {
 
-  const { gridViewFunc, gridListFunc } = useFilterCustomHook();
+  const { gridViewFunc, listViewFunc } = useFilterCustomHook();
   return (
     <div className={styles.sort_section}>
 
@@ -18,7 +18,7 @@ const Sort = () => {
 
         <button
           className={styles.sort_btn}
-          onClick={gridListFunc}
+          onClick={listViewFunc}
         >
           <BsList className="icon" />
         </button>
