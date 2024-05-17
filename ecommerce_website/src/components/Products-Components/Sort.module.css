@@ -1,0 +1,35 @@
+.sort_section {
+  background-color: greenyellow;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+
+  && .sorting_list__grid {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 30px;
+  }
+
+  && .product_data {
+  }
+
+  && .sort_selection {
+  }
+
+  && .sort_btn {
+    padding: 0.8rem 1rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  && .sort_btn:hover {
+    background-color: black;
+    color: white;
+  }
+}
