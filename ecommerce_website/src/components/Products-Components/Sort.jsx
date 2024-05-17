@@ -8,6 +8,8 @@ const Sort = () => {
   return (
     <div className={styles.sort_section}>
 
+      {/* Starting of First Column */}
+
       <div className={styles.sorting_list__grid}>
         <button
           className={styles.sort_btn}
@@ -24,13 +26,32 @@ const Sort = () => {
         </button>
       </div>
 
+      {/* Ending of First Column */}
+
+      {/* Starting of Second Column */}
+
       <div className={styles.product_data}>
         <h2> {`${filter_products.length} Product Available`} </h2>
       </div>
 
+      {/* Ending of Second Column */}
+
+      {/* Starting of Third Column */}
+
       <div className={styles.sort_selection}>
-        <h2> dropdown </h2>
+        {/* <h2> dropdown </h2> */}
+        <select name="dropdown" id="dropdown" className={styles.dropdown_select}>
+          <option value="lowest"> Price (lowest) </option>
+          <option value="#" disabled></option>
+          <option value="highest"> Price (highest) </option>
+          <option value="#" disabled></option>
+          <option value="lowest"> Price (a-z) </option>
+          <option value="#" disabled></option>
+          <option value="lowest"> Price (z-a) </option>
+        </select>
       </div>
+
+      {/* Ending of Third Column */}
 
     </div>
   )
