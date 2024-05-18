@@ -21,6 +21,15 @@ const FilterFuncForReducer = (currFilterState, action) => {
         grid_view: false,
       }
 
+    case "SORTING_BY_PRICE":
+      let userSortPrice = document.getElementById("dropdown");
+      let sortFilterPrice = userSortPrice.options[userSortPrice.selectedIndex].value;
+      console.log(sortFilterPrice);
+      return {
+        ...currFilterState,
+        sorting_price: sortFilterPrice,
+      }
+
     default: return currFilterState;
   }
 }

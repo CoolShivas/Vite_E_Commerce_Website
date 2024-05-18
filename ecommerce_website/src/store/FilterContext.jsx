@@ -7,7 +7,8 @@ const FilterContext = createContext();
 const FilterInitialState = {
     filter_products: [],
     all_products: [],
-    grid_view: false,// It will display the Grid View of products or List View of products depends of true or false;
+    grid_view: true,// It will display the Grid View of products or List View of products depends of true or false;
+    sorting_price: "lowest",
 };
 
 
@@ -32,6 +33,11 @@ export const FilterContextProvider = (props) => {
     };
 
 
+    const sortingOrFilterByPrice = () => {
+        return dispatchFilterData({
+            type: "SORTING_BY_PRICE",
+        })
+    };
 
     useEffect(() => {
         dispatchFilterData({
@@ -44,6 +50,7 @@ export const FilterContextProvider = (props) => {
         ...newFilterData,
         gridViewFunc,
         listViewFunc,
+        sortingOrFilterByPrice,
     }}>
         {props.children}
     </FilterContext.Provider>
