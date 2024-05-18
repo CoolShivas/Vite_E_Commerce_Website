@@ -33,9 +33,11 @@ export const FilterContextProvider = (props) => {
     };
 
 
-    const sortingOrFilterByPrice = () => {
+    const sortingOrFilterByPrice = (event) => {
+        let userSelectValue = event.target.value;
         return dispatchFilterData({
             type: "SORTING_BY_PRICE",
+            payload: userSelectValue,
         })
     };
 

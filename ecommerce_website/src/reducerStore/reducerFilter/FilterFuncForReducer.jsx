@@ -22,12 +22,13 @@ const FilterFuncForReducer = (currFilterState, action) => {
       }
 
     case "SORTING_BY_PRICE":
-      let userSortPrice = document.getElementById("dropdown");
-      let sortFilterPrice = userSortPrice.options[userSortPrice.selectedIndex].value;
-      console.log(sortFilterPrice);
+      // let userSortPrice = document.getElementById("dropdown");
+      // let sortFilterPrice = userSortPrice.options[userSortPrice.selectedIndex].value;
+      // console.log(sortFilterPrice);
       return {
         ...currFilterState,
-        sorting_price: sortFilterPrice,
+        // sorting_price: sortFilterPrice,
+        sorting_price: action.payload,
       }
 
     case "SORTING_PRODUCT_PRICE":
