@@ -39,6 +39,16 @@ export const FilterContextProvider = (props) => {
         })
     };
 
+    // Sorting the products on the basis of price from highest to lowest;
+    useEffect(() => {
+        // console.log('Sorting products on price');
+        dispatchFilterData({
+            type: "SORTING_PRODUCT_PRICE",
+            payload: products,
+        })
+    }, [newFilterData.sorting_price]);
+
+
     useEffect(() => {
         dispatchFilterData({
             type: "LOAD_FILTER_PRODUCTS",

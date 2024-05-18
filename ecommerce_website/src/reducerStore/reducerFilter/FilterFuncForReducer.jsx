@@ -30,6 +30,42 @@ const FilterFuncForReducer = (currFilterState, action) => {
         sorting_price: sortFilterPrice,
       }
 
+    case "SORTING_PRODUCT_PRICE":
+      let latestSortData;
+      let tempSortData = [...action.payload];
+
+      // Sorting the product ascendingly on the basis of alphabets;
+      if (currFilterState.sorting_price === "a-z") {
+        latestSortData = tempSortData.sort((a, b) => {
+          return a.name.localeCompare(b.name);
+        })
+      }
+      // Sorting the product decendingly on the basis of alphabets;
+      if (currFilterState.sorting_price === "z-a") {
+        latestSortData = tempSortData.sort((a, b) => {
+          return b.name.localeCompare(a.name);
+        })
+      }
+      // Sorting the product ascendingly on the basis of price;
+      if (currFilterState.sorting_price === "lowest") {
+        const sortingProLowest = ((a, b) => {
+          return a.price - b.price;
+        })
+        latestSortData = tempSortData.sort(sortingProLowest);
+      }
+      // Sorting the product ascendingly on the basis of price;
+      if (currFilterState.sorting_price === "highest") {
+        const sortingProHighest = ((a, b) => {
+          return b.price - a.price;
+        })
+        latestSortData = tempSortData.sort(sortingProHighest);
+      }
+
+      return {
+        ...currFilterState,
+        filter_products: latestSortData,
+      }
+
     default: return currFilterState;
   }
 }
