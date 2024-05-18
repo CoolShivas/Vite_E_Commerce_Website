@@ -1,0 +1,17 @@
+.filter_search {
+  background-color: orange;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  && input {
+    padding: 0.6rem 1rem;
+    width: 80%;
+  }
+
+  && h3 {
+    padding: 0.6rem 1rem;
+    width: 80%;
+  }
+}
