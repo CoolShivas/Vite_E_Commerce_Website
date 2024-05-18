@@ -9,6 +9,7 @@ const FilterInitialState = {
     all_products: [],
     grid_view: true,// It will display the Grid View of products or List View of products depends of true or false;
     sorting_price: "lowest",
+    search_filtering: { text: "" },
 };
 
 
@@ -41,14 +42,28 @@ export const FilterContextProvider = (props) => {
         })
     };
 
+    // Updating the filter or search values
+    const updateFilteringBySearch = (event) => {
+        let name = event.target.name;
+        let value = event.target.value;
+
+        return dispatchFilterData({
+            type: "UPDATE_FILTER_ON_SEARCH",
+            payload: { name, value },
+        })
+    };
+
     // Sorting the products on the basis of price from highest to lowest;
     useEffect(() => {
+        dispatchFilterData({
+            type: "PRODUCTS_FILTERATION",
+        })
         // console.log('Sorting products on price');
         dispatchFilterData({
             type: "SORTING_PRODUCT_PRICE",
             payload: products,
         })
-    }, [newFilterData.sorting_price]);
+    }, [newFilterData.sorting_price, newFilterData.search_filtering]);
 
 
     useEffect(() => {
@@ -63,6 +78,7 @@ export const FilterContextProvider = (props) => {
         gridViewFunc,
         listViewFunc,
         sortingOrFilterByPrice,
+        updateFilteringBySearch,
     }}>
         {props.children}
     </FilterContext.Provider>

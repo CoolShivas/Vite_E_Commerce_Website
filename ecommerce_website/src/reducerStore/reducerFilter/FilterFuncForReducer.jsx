@@ -94,6 +94,34 @@ const FilterFuncForReducer = (currFilterState, action) => {
         filter_products: latestSortData,
       }
 
+    // Searching or Filtering the products on the basis;
+    case "UPDATE_FILTER_ON_SEARCH":
+      const { name, value } = action.payload;
+      return {
+        ...currFilterState,
+        search_filtering: {
+          ...currFilterState.search_filtering,
+          [name]: value,
+        },
+      }
+
+    // Updation of Searching or Filtering the products on the basis;
+    case "PRODUCTS_FILTERATION":
+      let { all_products } = currFilterState;
+      let tempFilterProducts = [...all_products];
+
+      const { text } = currFilterState.search_filtering;
+
+      if (text) {
+        tempFilterProducts = tempFilterProducts.filter((myElem) => {
+          return myElem.name.toLowerCase().includes(text);
+        })
+      }
+      return {
+        ...currFilterState,
+        filter_products: tempFilterProducts,
+      }
+
     default: return currFilterState;
   }
 }
