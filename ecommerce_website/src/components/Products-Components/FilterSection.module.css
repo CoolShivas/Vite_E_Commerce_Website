@@ -8,6 +8,7 @@
   && input {
     padding: 0.6rem 1rem;
     width: 80%;
+    font-size: 25px;
   }
 
   && h3 {
