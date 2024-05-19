@@ -34,19 +34,15 @@
       background: transparent;
     }
   }
+}
 
-  && .company_products {
-    background-color: violet;
-    font-size: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1rem;
-
-    && button {
-      border: none;
-      background: transparent;
+.filter_company {
+  background-color: violet;
+  margin: 10px;
+  && .filter_company__products {
+    background-color: rebeccapurple;
+    && .filter_company__select {
+      font-size: 25px;
     }
   }
 }

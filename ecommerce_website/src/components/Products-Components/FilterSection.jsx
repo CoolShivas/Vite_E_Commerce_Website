@@ -39,7 +39,7 @@ const FilterSection = () => {
       <div className={classes.filter_categroy}>
         {/* Starting of CATEGORY wise data */}
         <h3> Category </h3>
-        <div className={classes.category_products}>
+        <form className={classes.category_products}>
           {categoryOnlyData.map((brrElem, index) => {
             return <button key={index}
               type="button" name="category"
@@ -51,23 +51,30 @@ const FilterSection = () => {
 
             </button>
           })}
-        </div>
+        </form>
         {/* Ending of CATEGORY wise data */}
+
+      </div>
+
+      <div className={classes.filter_company}>
         {/* Starting of COMPANY wise data */}
         <h3> Company </h3>
-        <div className={classes.company_products}>
-          {companyOnlyData.map((crrElem, index) => {
-            return <button key={index}
-              type="button" name="company"
-              value={crrElem}
-              onClick={updateFilteringBySearch}
+        <form className={classes.filter_company__products}>
+          <select name="company" id="company" className={classes.filter_company__select}
+            onClick={updateFilteringBySearch}
+          >
+            {companyOnlyData.map((crrElem, index) => {
+              return <option key={index}
+                name="company"
+                value={crrElem}
+              >
+                {crrElem}
 
-            >
-              {crrElem}
+              </option>
+            })}
+          </select>
 
-            </button>
-          })}
-        </div>
+        </form>
         {/* Ending of COMPANY wise data */}
       </div>
 
