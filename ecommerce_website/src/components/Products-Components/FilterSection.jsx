@@ -16,9 +16,9 @@ const FilterSection = () => {
       // // if select the mobile category or laptop category or watch categroy using arr[property];
       // // Whereas arr.category will provide the array of products categories only;
     })
-    newValue = ["All", ...new Set(newValue)]; // // Here, we are getting the specific categroies only;
+    return newValue = ["All", ...new Set(newValue)]; // // Here, we are getting the specific categroies only;
     // // Now, on specific category we are able to select the products accordingly;
-    console.log(newValue);
+    // console.log(newValue);
   };
 
 
@@ -27,11 +27,31 @@ const FilterSection = () => {
   const categoryOnlyData = gettingUniqueData(all_products, "category");
 
   return (
-    <div className={classes.filter_search}>
-      <form onSubmit={(e) => { e.preventDefault() }}>
-        <input type="text" name="text" value={text} onChange={updateFilteringBySearch} placeholder="Search" className="form-control" />
-      </form>
-    </div>
+    <>
+      <div className={classes.filter_search}>
+        <form onSubmit={(e) => { e.preventDefault() }}>
+          <input type="text" name="text" value={text} onChange={updateFilteringBySearch} placeholder="Search" className="form-control" />
+        </form>
+      </div>
+
+      <div className={classes.filter_categroy}>
+        <h3> Category </h3>
+        <div className={classes.category_products}>
+          {categoryOnlyData.map((brrElem, index) => {
+            return <button key={index}
+              type="button" name="category"
+              value={brrElem}
+              onClick={updateFilteringBySearch}
+
+            >
+              {brrElem}
+
+            </button>
+          })}
+        </div>
+      </div>
+
+    </>
   )
 }
 

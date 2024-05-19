@@ -16,3 +16,22 @@
     width: 80%;
   }
 }
+
+.filter_categroy {
+  background-color: yellow;
+  margin: 10px;
+
+  && .category_products {
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+
+    && button {
+      border: none;
+      background: transparent;
+    }
+  }
+}

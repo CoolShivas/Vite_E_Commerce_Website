@@ -110,11 +110,16 @@ const FilterFuncForReducer = (currFilterState, action) => {
       let { all_products } = currFilterState;
       let tempFilterProducts = [...all_products];
 
-      const { text } = currFilterState.search_filtering;
+      const { text, category } = currFilterState.search_filtering;
 
       if (text) {
         tempFilterProducts = tempFilterProducts.filter((myElem) => {
           return myElem.name.toLowerCase().includes(text);
+        })
+      }
+      if (category) {
+        tempFilterProducts = tempFilterProducts.filter((myElem) => {
+          return myElem.category === category;
         })
       }
       return {

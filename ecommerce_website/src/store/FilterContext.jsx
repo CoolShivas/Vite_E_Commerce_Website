@@ -9,7 +9,10 @@ const FilterInitialState = {
     all_products: [],
     grid_view: true,// It will display the Grid View of products or List View of products depends of true or false;
     sorting_price: "lowest",
-    search_filtering: { text: "" },
+    search_filtering: {
+        text: "",
+        catgory: "all",
+    },
 };
 
 
