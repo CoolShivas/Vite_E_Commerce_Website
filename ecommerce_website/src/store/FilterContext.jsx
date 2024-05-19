@@ -12,6 +12,7 @@ const FilterInitialState = {
     search_filtering: {
         text: "",
         catgory: "all",
+        company: "all",
     },
 };
 

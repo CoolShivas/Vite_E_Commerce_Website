@@ -25,6 +25,8 @@ const FilterSection = () => {
 
   // // We need Unique Data;
   const categoryOnlyData = gettingUniqueData(all_products, "category");
+  const companyOnlyData = gettingUniqueData(all_products, "company");
+  console.log(companyOnlyData)// Able to acces the companies like apple, dell, etc.
 
   return (
     <>
@@ -35,6 +37,7 @@ const FilterSection = () => {
       </div>
 
       <div className={classes.filter_categroy}>
+        {/* Starting of CATEGORY wise data */}
         <h3> Category </h3>
         <div className={classes.category_products}>
           {categoryOnlyData.map((brrElem, index) => {
@@ -49,6 +52,23 @@ const FilterSection = () => {
             </button>
           })}
         </div>
+        {/* Ending of CATEGORY wise data */}
+        {/* Starting of COMPANY wise data */}
+        <h3> Company </h3>
+        <div className={classes.company_products}>
+          {companyOnlyData.map((crrElem, index) => {
+            return <button key={index}
+              type="button" name="company"
+              value={crrElem}
+              onClick={updateFilteringBySearch}
+
+            >
+              {crrElem}
+
+            </button>
+          })}
+        </div>
+        {/* Ending of COMPANY wise data */}
       </div>
 
     </>

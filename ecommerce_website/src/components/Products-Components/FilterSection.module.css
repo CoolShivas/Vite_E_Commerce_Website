@@ -34,4 +34,19 @@
       background: transparent;
     }
   }
+
+  && .company_products {
+    background-color: violet;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+
+    && button {
+      border: none;
+      background: transparent;
+    }
+  }
 }
