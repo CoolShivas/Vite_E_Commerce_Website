@@ -93,9 +93,19 @@ const FilterSection = () => {
       </div>
 
       {/* Starting of COLORS wise data */}
-      <div className="filter_colors">
+      <div className={classes.filter_colors}>
+        <h3> Colors </h3>
         <form className={classes.filter_colors__products}>
-          hello
+          {colorsOnlyData.map((drrElem, index) => {
+            return <button key={index}
+              value={drrElem}
+              name="colors"
+              type="button"
+              style={{ backgroundColor: drrElem }}
+            >
+              {drrElem}
+            </button>
+          })}
         </form>
       </div>
       {/* Ending of COLORS wise data */}
