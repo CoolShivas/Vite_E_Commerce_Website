@@ -13,6 +13,7 @@ const FilterInitialState = {
         text: "",
         catgory: "all",
         company: "all",
+        color: "all",
     },
 };
 

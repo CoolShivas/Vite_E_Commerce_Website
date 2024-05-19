@@ -27,6 +27,8 @@ const FilterSection = () => {
   const categoryOnlyData = gettingUniqueData(all_products, "category");
   const companyOnlyData = gettingUniqueData(all_products, "company");
   // console.log(companyOnlyData)// Able to acces the companies like apple, dell, etc.
+  const colorsOnlyData = gettingUniqueData(all_products, "colors");
+  console.log(colorsOnlyData);// Able to acces the colors of all producst.
 
   return (
     <>
@@ -78,6 +80,13 @@ const FilterSection = () => {
         {/* Ending of COMPANY wise data */}
       </div>
 
+      {/* Starting of COLORS wise data */}
+      <div className="filter_colors">
+        <form className={classes.filter_colors__products}>
+          hello
+        </form>
+      </div>
+      {/* Ending of COLORS wise data */}
     </>
   )
 }
