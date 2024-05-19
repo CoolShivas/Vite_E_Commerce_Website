@@ -16,15 +16,21 @@ const FilterSection = () => {
       // // if select the mobile category or laptop category or watch categroy using arr[property];
       // // Whereas arr.category will provide the array of products categories only;
     })
-    if (property === "colors") {
-      return ["all", ...new Set([].concat(...newValue))]
-    }
-    else {
-      return newValue = ["all", ...new Set(newValue)];
-    }
+    // if (property === "colors") {
+    //   return ["all", ...new Set([].concat(...newValue))]
+    // }
+    // else {
+    //   return newValue = ["all", ...new Set(newValue)];
+    // }
     // // Here, we are getting the specific categroies only;
     // // Now, on specific category we are able to select the products accordingly;
     // console.log(newValue);
+    if (property === "colors") {
+      newValue = newValue.flat();// // Same thing done without using new Set and concat;
+    }
+
+    return newValue = ["all", ...new Set(newValue)];
+
   };
 
 
