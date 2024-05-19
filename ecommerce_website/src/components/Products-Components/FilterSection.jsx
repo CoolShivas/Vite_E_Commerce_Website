@@ -16,7 +16,7 @@ const FilterSection = () => {
       // // if select the mobile category or laptop category or watch categroy using arr[property];
       // // Whereas arr.category will provide the array of products categories only;
     })
-    return newValue = ["All", ...new Set(newValue)]; // // Here, we are getting the specific categroies only;
+    return newValue = ["all", ...new Set(newValue)]; // // Here, we are getting the specific categroies only;
     // // Now, on specific category we are able to select the products accordingly;
     // console.log(newValue);
   };
@@ -26,7 +26,7 @@ const FilterSection = () => {
   // // We need Unique Data;
   const categoryOnlyData = gettingUniqueData(all_products, "category");
   const companyOnlyData = gettingUniqueData(all_products, "company");
-  console.log(companyOnlyData)// Able to acces the companies like apple, dell, etc.
+  // console.log(companyOnlyData)// Able to acces the companies like apple, dell, etc.
 
   return (
     <>
