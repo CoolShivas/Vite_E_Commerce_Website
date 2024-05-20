@@ -3,10 +3,29 @@
 const FilterFuncForReducer = (currFilterState, action) => {
   switch (action.type) {
     case "LOAD_FILTER_PRODUCTS":
+
+      let priceZrr = action.payload.map((rangePrice) => {
+        return rangePrice.price;
+      })
+      console.log(priceZrr);// Here, we are able to access the price array of all products;
+
+      // let priceMax = priceZrr.reduce((acc, curr) => {
+      //   return Math.max(acc, curr);
+      // }, 0)
+      // console.log(priceMax); // Getting maximum price using reduce method;
+
+      let priceMax = Math.max(...priceZrr);
+      console.log(priceMax); // Getting maximum price using Math.max method;
+
       return {
         ...currFilterState,
         filter_products: [...action.payload],
         all_products: [...action.payload],
+        search_filtering: {
+          ...currFilterState.search_filtering,
+          priceMax,
+          price: priceMax,
+        },
       };
 
     case "SET_GRID_VIEW":
@@ -110,7 +129,7 @@ const FilterFuncForReducer = (currFilterState, action) => {
       let { all_products } = currFilterState;
       let tempFilterProducts = [...all_products];
 
-      const { text, category, company, colors } = currFilterState.search_filtering;
+      const { text, category, company, colors, price } = currFilterState.search_filtering;
 
       if (text) {
         tempFilterProducts = tempFilterProducts.filter((myElem) => {
@@ -132,6 +151,16 @@ const FilterFuncForReducer = (currFilterState, action) => {
           myElem.colors.includes(colors);
         })
       }
+      // if (price === 0) {
+      //   tempFilterProducts = tempFilterProducts.filter((myElem) => {
+      //     myElem.price === price;
+      //   })
+      // }
+      // else {
+      //   tempFilterProducts = tempFilterProducts.filter((myElem) => {
+      //     myElem.price <= price;
+      //   })
+      // }
       return {
         ...currFilterState,
         filter_products: tempFilterProducts,

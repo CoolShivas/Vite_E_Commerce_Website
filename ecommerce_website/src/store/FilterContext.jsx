@@ -14,6 +14,9 @@ const FilterInitialState = {
         catgory: "all",
         company: "all",
         colors: "all",
+        price: 0,
+        maxPrice: 0,
+        minPrice: 0,
     },
 };
 

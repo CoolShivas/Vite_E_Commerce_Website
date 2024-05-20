@@ -1,3 +1,4 @@
+import FormatPrice from "../../reducerStore/FormatPrice";
 import { FaCheck } from "react-icons/fa";
 import classes from "./FilterSection.module.css";
 import { useFilterCustomHook } from "../../store/FilterContext";
@@ -5,7 +6,7 @@ import { useFilterCustomHook } from "../../store/FilterContext";
 
 const FilterSection = () => {
 
-  const { search_filtering: { text, category, company, colors }, updateFilteringBySearch, all_products } = useFilterCustomHook();
+  const { search_filtering: { text, category, company, colors, price, maxPrice, minPrice }, updateFilteringBySearch, all_products } = useFilterCustomHook();
 
   // // To get the Unique data of each fields;
 
@@ -117,6 +118,21 @@ const FilterSection = () => {
         </div>
       </div>
       {/* Ending of COLORS wise data */}
+
+      {/* Starting of PRICE RANGE  wise data */}
+      <div className={classes.filter_price}>
+        <h3> Price Range </h3>
+        <div className={classes.filter_price__products}>
+          <p><FormatPrice priceABC={price}></FormatPrice></p>
+          <input type="range"
+            name="price"
+            min={minPrice}
+            max={maxPrice}
+            value={price}
+            onChange={updateFilteringBySearch} />
+        </div>
+      </div>
+      {/* Ending of PRICE RANGE  wise data */}
     </>
   )
 }
