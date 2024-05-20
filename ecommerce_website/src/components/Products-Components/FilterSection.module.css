@@ -62,3 +62,8 @@
     }
   }
 }
+
+.clear_filters {
+  background-color: orange;
+  padding: 10px;
+}

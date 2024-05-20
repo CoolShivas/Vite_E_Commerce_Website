@@ -166,6 +166,26 @@ const FilterFuncForReducer = (currFilterState, action) => {
         filter_products: tempFilterProducts,
       }
 
+
+    //Claering all the filters that is applied;
+
+    case "CLEAR_FILTERS":
+      return {
+        ...currFilterState,
+        search_filtering: {
+          ...currFilterState.search_filtering,
+          text: "",
+          catgory: "all",
+          company: "all",
+          colors: "all",
+          price: 0,
+          maxPrice: 0,
+          minPrice: 0,
+        },
+      }
+
+
+
     default: return currFilterState;
   }
 }

@@ -61,6 +61,14 @@ export const FilterContextProvider = (props) => {
         })
     };
 
+    // Clearing all the filters;
+    const clearFilters = () => {
+        dispatchFilterData({
+            type: "CLEAR_FILTERS"
+        })
+    };
+
+
     // Sorting the products on the basis of price from highest to lowest;
     useEffect(() => {
         dispatchFilterData({
@@ -87,6 +95,7 @@ export const FilterContextProvider = (props) => {
         listViewFunc,
         sortingOrFilterByPrice,
         updateFilteringBySearch,
+        clearFilters,
     }}>
         {props.children}
     </FilterContext.Provider>

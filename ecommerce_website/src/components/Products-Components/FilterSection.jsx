@@ -6,7 +6,7 @@ import { useFilterCustomHook } from "../../store/FilterContext";
 
 const FilterSection = () => {
 
-  const { search_filtering: { text, category, company, colors, price, maxPrice, minPrice }, updateFilteringBySearch, all_products } = useFilterCustomHook();
+  const { search_filtering: { text, category, company, colors, price, maxPrice, minPrice }, updateFilteringBySearch, all_products, clearFilters } = useFilterCustomHook();
 
   // // To get the Unique data of each fields;
 
@@ -133,6 +133,13 @@ const FilterSection = () => {
         </div>
       </div>
       {/* Ending of PRICE RANGE  wise data */}
+
+      {/* Starting of CLEAR ALL FILTERS  wise data */}
+      <div className={classes.filter_all__clear}>
+        <button type="button" onChange={clearFilters} className={classes.clear_filters}> Clear Filters </button>
+      </div>
+      {/* Ending of CLEAR ALL FILTERS  wise data */}
+
     </>
   )
 }
