@@ -14,16 +14,16 @@ const AddToCart = ({ productABC }) => {
   const [myColour, setMyColour] = useState(colors[0]);// Here, we set the default value of myColour to colors[0] instead of null;
   const [amount, setAmount] = useState(1);// Here, we set the default value of amount is 1 instead of 0 because it menas that 0 indicate product is out of stock ;
 
-  const setDecrease = () =>{
+  const setDecrease = () => {
     amount > 1 ? setAmount(amount - 1) : setAmount(1);
     // // if amount is always greater than 1 because 0 indicate product is out of stock ;
     // // setAmount(amount - 1) means that we can decrease the amount if number is greater than amount;
     // // Else always setAmount(1) never be 0 or directly delete the product by delete button;
   };
 
-  const setIncrease = () =>{
+  const setIncrease = () => {
     amount < stock ? setAmount(amount + 1) : setAmount(stock);
-     // // if amount is always lesser than stock because stock always define the amount of quantity you can add;
+    // // if amount is always lesser than stock because stock always define the amount of quantity you can add;
     // // setAmount(amount + 1) means that we can increase the amount of quantity;
     // // Else always setAmount(stock) never be 0 or directly depends on stocks availability;
   };
@@ -67,7 +67,10 @@ const AddToCart = ({ productABC }) => {
       ></CartAmtToggle>
       {/* Ending of Colour Badge for Product of that colour  */}
       <NavLink to="/cart">
-        <button className={classes.btn_add__cart}> Add To Cart </button>
+        <button className={classes.btn_add__cart}
+          onClick={() => additionToCart(id, myColour, amount, productABC)}
+        // Selecting what we want to be add in the cart is id myColour amount productABC. Whereas the myColour and amount comes from the state that we declare and productABC coming from the SingleProduct;
+        > Add To Cart </button>
       </NavLink>
     </>
   );
