@@ -13,7 +13,7 @@ const FilterInitialState = {
         text: "",
         catgory: "all",
         company: "all",
-        color: "all",
+        colors: "all",
     },
 };
 
@@ -68,7 +68,7 @@ export const FilterContextProvider = (props) => {
             type: "SORTING_PRODUCT_PRICE",
             payload: products,
         })
-    }, [newFilterData.sorting_price, newFilterData.search_filtering]);
+    }, [products, newFilterData.sorting_price, newFilterData.search_filtering]);
 
 
     useEffect(() => {

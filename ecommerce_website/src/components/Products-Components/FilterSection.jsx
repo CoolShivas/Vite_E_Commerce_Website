@@ -1,10 +1,11 @@
+import { FaCheck } from "react-icons/fa";
 import classes from "./FilterSection.module.css";
 import { useFilterCustomHook } from "../../store/FilterContext";
 
 
 const FilterSection = () => {
 
-  const { search_filtering: { text }, updateFilteringBySearch, all_products } = useFilterCustomHook();
+  const { search_filtering: { text, category, company, colors }, updateFilteringBySearch, all_products } = useFilterCustomHook();
 
   // // To get the Unique data of each fields;
 
@@ -17,7 +18,7 @@ const FilterSection = () => {
       // // Whereas arr.category will provide the array of products categories only;
     })
     // if (property === "colors") {
-    //   return ["all", ...new Set([].concat(...newValue))]
+    //   return (newValue = ["all", ...new Set([].concat(...newValue))])
     // }
     // else {
     //   return newValue = ["all", ...new Set(newValue)];
@@ -40,7 +41,7 @@ const FilterSection = () => {
   const companyOnlyData = gettingUniqueData(all_products, "company");
   // console.log(companyOnlyData)// Able to acces the companies like apple, dell, etc.
   const colorsOnlyData = gettingUniqueData(all_products, "colors");
-  console.log(colorsOnlyData);// Able to acces the colors of all producst.
+  // console.log(colorsOnlyData);// Able to acces the colors of all producst.
 
   return (
     <>
@@ -53,10 +54,12 @@ const FilterSection = () => {
       <div className={classes.filter_categroy}>
         {/* Starting of CATEGORY wise data */}
         <h3> Category </h3>
-        <form className={classes.category_products}>
+        <div className={classes.category_products}>
           {categoryOnlyData.map((brrElem, index) => {
-            return <button key={index}
-              type="button" name="category"
+            return <button
+              key={index}
+              type="button"
+              name="category"
               value={brrElem}
               onClick={updateFilteringBySearch}
 
@@ -65,7 +68,7 @@ const FilterSection = () => {
 
             </button>
           })}
-        </form>
+        </div>
         {/* Ending of CATEGORY wise data */}
 
       </div>
@@ -73,12 +76,13 @@ const FilterSection = () => {
       <div className={classes.filter_company}>
         {/* Starting of COMPANY wise data */}
         <h3> Company </h3>
-        <form className={classes.filter_company__products}>
+        <div className={classes.filter_company__products}>
           <select name="company" id="company" className={classes.filter_company__select}
             onClick={updateFilteringBySearch}
           >
             {companyOnlyData.map((crrElem, index) => {
-              return <option key={index}
+              return <option
+                key={index}
                 name="company"
                 value={crrElem}
               >
@@ -88,25 +92,29 @@ const FilterSection = () => {
             })}
           </select>
 
-        </form>
+        </div>
         {/* Ending of COMPANY wise data */}
       </div>
 
       {/* Starting of COLORS wise data */}
       <div className={classes.filter_colors}>
         <h3> Colors </h3>
-        <form className={classes.filter_colors__products}>
+        <div className={classes.filter_colors__products}>
           {colorsOnlyData.map((drrElem, index) => {
-            return <button key={index}
+            return <button
+              key={index}
               value={drrElem}
               name="colors"
               type="button"
               style={{ backgroundColor: drrElem }}
+              onClick={updateFilteringBySearch}
             >
-              {drrElem}
+              {/* {drrElem} */}
+              {colors === drrElem ? <FaCheck /> : null}
+
             </button>
           })}
-        </form>
+        </div>
       </div>
       {/* Ending of COLORS wise data */}
     </>
