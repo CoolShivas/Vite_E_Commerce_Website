@@ -1,4 +1,5 @@
-import React, { createContext, useReducer } from 'react'
+import CartFuncForReducer from '../reducerStore/reducerCart/CartFuncForReducer';
+import React, { createContext, useReducer, useContext } from 'react'
 
 const CartContext = createContext();
 
@@ -29,5 +30,12 @@ export const CartProvider = ({ children }) => {
         {children}
     </CartContext.Provider>
 }
+
+
+
+export const useAddTocartCustomHook = () => {
+    return useContext(CartContext);
+};
+
 
 export default CartContext;

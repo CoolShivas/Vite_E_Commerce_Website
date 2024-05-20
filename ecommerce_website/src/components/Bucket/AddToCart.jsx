@@ -1,10 +1,14 @@
 import { NavLink } from "react-router-dom";
 import CartAmtToggle from "./CartAmtToggle";
 import { FaCheck } from "react-icons/fa";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import classes from "./AddToCart.module.css";
+import { useAddTocartCustomHook } from "../../store/CartContext";
+
 
 const AddToCart = ({ productABC }) => {
+
+  const { additionToCart } = useAddTocartCustomHook();
   // console.log(productABC);// Here, we are able to access the productABC;
   // console.log(productABC.colors[0]);
   const { id, colors, stock } = productABC;
