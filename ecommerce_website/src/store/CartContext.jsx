@@ -17,7 +17,7 @@ export const CartProvider = ({ children }) => {
     const additionToCart = (id, myColour, amount, productABC) => {
         dispatchCartData({
             type: "ADD_TO_CART",
-            payload: (id, myColour, amount, productABC)
+            payload: { id, myColour, amount, productABC }
         })
     };
 
