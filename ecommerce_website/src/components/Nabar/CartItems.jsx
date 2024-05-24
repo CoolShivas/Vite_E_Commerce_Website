@@ -25,16 +25,20 @@ const CartItems = ({ id, name, image, colors, price, amount }) => {
                             </div>
                         </div>
                     </div>
-
                     <div className={classes.cart_price__div}>
                         <p> <FormatPrice priceABC={price}></FormatPrice> </p>
                     </div>
+
                     <div className={classes.cart_amount__div}>
                         <CartAmtToggle
                             amountABC={amount}
                         // setDecreaseABC={setDecrease}
                         // setIncreaseABC={setIncrease}
                         ></CartAmtToggle>
+                    </div>
+
+                    <div className={classes.cart_subtotal__div}>
+                        <FormatPrice priceABC={price * amount}></FormatPrice>
                     </div>
                 </div>
             </div>

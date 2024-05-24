@@ -34,6 +34,11 @@
       padding: 50px;
       font-size: 25px;
     }
+
+    && .cart_subtotal__div {
+      padding: 50px;
+      font-size: 25px;
+    }
   }
 }
 
