@@ -1,3 +1,4 @@
+import { MdDelete } from "react-icons/md";
 import CartAmtToggle from "../Bucket/CartAmtToggle";
 import FormatPrice from "../../reducerStore/FormatPrice";
 import classes from "./CartItems.module.css";
@@ -39,6 +40,10 @@ const CartItems = ({ id, name, image, colors, price, amount }) => {
 
                     <div className={classes.cart_subtotal__div}>
                         <FormatPrice priceABC={price * amount}></FormatPrice>
+                    </div>
+
+                    <div className={classes.cart_remove__div}>
+                        <MdDelete />
                     </div>
                 </div>
             </div>
