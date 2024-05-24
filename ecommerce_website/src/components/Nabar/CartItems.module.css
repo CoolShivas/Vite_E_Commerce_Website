@@ -1,0 +1,41 @@
+.cartItems_container {
+  /* background-color: orange; */
+  p {
+    font-size: 25px;
+  }
+
+  && .grid_five_cartItems {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    && .cart_image__name {
+      && img {
+        width: 150px;
+        height: 100px;
+      }
+    }
+  }
+}
+
+/* Selected colour product choose colour output */
+.cart_colors__div {
+  && .color_style {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    && .color_display {
+      width: 1.5rem;
+      height: 1.5rem;
+
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+  }
+}

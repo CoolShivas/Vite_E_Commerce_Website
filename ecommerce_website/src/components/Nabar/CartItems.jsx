@@ -1,17 +1,33 @@
+import classes from "./CartItems.module.css";
 
+const CartItems = ({ id, name, image, colors, price, amount }) => {
 
-const CartItems = ({ id, name, image, color, price, amount }) => {
     return (
         <>
-            <div className="cartItems_container">
-                <div className="grid_five_cartItems">
-                    <div className="cart_image__name">
+            <div className={classes.cartItems_container}>
+                <div className={classes.grid_five_cartItems}>
+                    <div className={classes.cart_image__name}>
                         <div>
                             <figure>
                                 <img src={image}
                                     alt={id} />
                             </figure>
                         </div>
+                    </div>
+                    <div className={classes.cart_colors__div}>
+                        <p> {name} </p>
+                        <div className={classes.color_style}>
+                            <p> color :  </p>
+                            <div className={classes.color_display}
+                                style={{ background: colors, color: colors }}
+                            ></div>
+                        </div>
+                    </div>
+                    <div className={classes.cart_price__div}>
+                        <p> {price} </p>
+                    </div>
+                    <div className={classes.cart_amount__div}>
+                        {amount}
                     </div>
                 </div>
             </div>
