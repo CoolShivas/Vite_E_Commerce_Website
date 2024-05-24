@@ -1,5 +1,6 @@
 import classes from "./Cart.module.css";
 import { useAddTocartCustomHook } from "../../store/CartContext"
+import CartItems from "./CartItems";
 
 
 const Cart = () => {
@@ -18,6 +19,12 @@ const Cart = () => {
             </div>
             <hr />
 
+            <div className="mapping_div">
+                {cart.map((currElem) => {
+                    return <CartItems key={currElem.id} {...currElem} > </CartItems>
+                    // // Here, {...currElem} this is passing as props to Cartitems component where you can destructure it;
+                })}
+            </div>
         </div>
 
     </>
