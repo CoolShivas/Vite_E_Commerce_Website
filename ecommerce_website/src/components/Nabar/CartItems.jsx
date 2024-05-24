@@ -1,3 +1,4 @@
+import CartAmtToggle from "../Bucket/CartAmtToggle";
 import FormatPrice from "../../reducerStore/FormatPrice";
 import classes from "./CartItems.module.css";
 
@@ -29,7 +30,11 @@ const CartItems = ({ id, name, image, colors, price, amount }) => {
                         <p> <FormatPrice priceABC={price}></FormatPrice> </p>
                     </div>
                     <div className={classes.cart_amount__div}>
-                        {amount}
+                        <CartAmtToggle
+                            amountABC={amount}
+                        // setDecreaseABC={setDecrease}
+                        // setIncreaseABC={setIncrease}
+                        ></CartAmtToggle>
                     </div>
                 </div>
             </div>
