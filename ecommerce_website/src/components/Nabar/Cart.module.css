@@ -1,0 +1,13 @@
+.cart_container {
+  /* background-color: orange; */
+  margin: 1rem;
+  && .cart_grid__five {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
